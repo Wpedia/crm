@@ -3,6 +3,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+:root {
+  --background: 0 0% 100%;     /* white */
+  --foreground: 222 47% 11%;   /* dark */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 0 0% 100%;
+  }
+}
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
